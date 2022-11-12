@@ -1,0 +1,34 @@
+public class patternRec {
+    //Fuction  to print row 
+    static void printn( int num){
+        //base case
+        if(num==0)
+        return;
+        System.out.println("*");
+        //recursively calling print()
+        printn(num-1);
+
+    }
+    //funtion to print the pattern
+    static void pattern(int n, int i){
+        //base case
+        if(n==0)
+        return;
+        printn(i);
+        System.out.println();
+        //recursevely calling pattern()
+        pattern(n - 1, i+1);
+
+    }
+
+
+
+// Drive code
+
+    public static void main(String[] args) {
+        int n  = 5;
+        pattern(n, 1);
+        
+    }
+    
+}
